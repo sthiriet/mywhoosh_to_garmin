@@ -29,7 +29,7 @@ OAuth. Les bibliothèques transitives sont également épinglées dans
 
 ```bash
 git clone <URL_DU_DEPOT>
-cd mywhoosh-to-garmin
+cd mywhoosh_to_garmin
 
 python3 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip
@@ -136,7 +136,7 @@ Avec `cron`, par exemple toutes les six heures :
 
 ```cron
 CRON_TZ=Europe/Paris
-0 */6 * * * flock -n /tmp/mywhoosh-to-garmin.lock -c 'cd /chemin/vers/mywhoosh-to-garmin && /chemin/vers/mywhoosh-to-garmin/.venv/bin/python main.py 2>&1 | /usr/bin/logger -t mywhoosh-to-garmin'
+0 */6 * * * flock -n /tmp/mywhoosh_to_garmin.lock -c 'cd /chemin/vers/mywhoosh_to_garmin && /chemin/vers/mywhoosh_to_garmin/.venv/bin/python main.py 2>&1 | /usr/bin/logger -t mywhoosh_to_garmin'
 ```
 
 Adaptez les chemins, le fuseau horaire et la fréquence.
@@ -144,7 +144,7 @@ Adaptez les chemins, le fuseau horaire et la fréquence.
 Sur les systèmes utilisant `systemd-journald`, consultez les logs avec :
 
 ```bash
-journalctl -t mywhoosh-to-garmin --since "today"
+journalctl -t mywhoosh_to_garmin --since "today"
 ```
 
 `flock -n` évite les exécutions simultanées. Une fréquence toutes les quelques
