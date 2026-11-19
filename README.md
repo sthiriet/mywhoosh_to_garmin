@@ -13,6 +13,18 @@ télécharge vers Garmin les activités absentes après modification du fichier 
 - Un compte Garmin Connect
 - Les identifiants FIT correspondant à votre appareil Garmin
 
+Les dépendances Python sont épingées dans `requirements.txt`. Les dépendances
+directes sont :
+
+- [`garminconnect`](https://github.com/cyberjunky/python-garminconnect) pour
+  l'accès à Garmin Connect ;
+- [`requests`](https://requests.readthedocs.io/) pour les échanges HTTP avec
+  MyWhoosh.
+
+`garminconnect` utilise notamment `garth` pour la gestion de l'authentification
+OAuth. Les bibliothèques transitives sont également épinglées dans
+`requirements.txt`.
+
 ## Installation
 
 ```bash
@@ -174,3 +186,8 @@ rm -f mywhoosh_token.json oauth1_token.json oauth2_token.json
 - Ne commitez jamais les fichiers de jeton
 - Utilisez des permissions `600` pour les mots de passe et jetons
 - Ne publiez jamais les fichiers FIT contenant des données d'activité
+
+## Licence
+
+Ce projet est distribué sous licence MIT. Le texte complet est disponible dans
+[LICENSE](LICENSE).
