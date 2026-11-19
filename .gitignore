@@ -1,0 +1,11 @@
+config.json
+mywhoosh_token.json
+oauth1_token.json
+oauth2_token.json
+garmin-tokens/*
+tokens/*
+.venv
+.DS_Store
+*.log
+*.fit
+!config.example.json

@@ -1,0 +1,10 @@
+{
+  "mywhoosh_email": "votre-adresse@example.com",
+  "mywhoosh_password": "votre-mot-de-passe-mywhoosh",
+  "garmin_email": "votre-adresse@example.com",
+  "garmin_password": "votre-mot-de-passe-garmin",
+  "token_dir": ".",
+  "manufacturer_id": 1,
+  "product_id": 4315,
+  "serial_number": 1123456789
+}
