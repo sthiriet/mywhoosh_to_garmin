@@ -144,8 +144,14 @@ def patch_fit_device(
                   defn["endian"] + "H", buf, pos + off, product_id
               )
             elif (
-                f_num == 3 and f_size == 4 and serial_number is not None
-            ):  # serial_number
+                defn["global"] == 0 and f_num == 7 and f_size == 4 and serial_number is not None
+            ):  # serial_number in file_id
+              struct.pack_into(
+                  defn["endian"] + "I", buf, pos + off, serial_number
+              )
+            elif (
+                defn["global"] == 23 and f_num == 3 and f_size == 4 and serial_number is not None
+            ):  # serial_number in device_info
               struct.pack_into(
                   defn["endian"] + "I", buf, pos + off, serial_number
               )
